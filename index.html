@@ -37,6 +37,14 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+  <style>
+  figcaption {
+    text-align: center;
+    margin-top: 5px;
+    font-size: 14px;
+    color: #555;
+  }
+</style>
 </head>
 
 <body>
@@ -148,26 +156,38 @@
         </div>
       </div>
       <!--/ Abstract. -->
-    </div>
-  </section>
 
-
-  <section class="section">
-    <div class="container is-max-desktop">
-
-      <div class="columns is-centered">
-
-        <!-- Result. -->
-        <div class="column">
-          <div class="content">
-            <h2 class="title is-3">Result</h2>
-            <img id="result" src="./static/images/result.jpg" alt="result" height="100%">
+      <!-- Method. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Method</h2>
+          <div class="content has-text-justified">
+            <p>
+            The Realistic-Fantasy Network (RFNet) contains two stages.
+            In the first stage, we transform the initial input prompt into a refined version specifically tailored for image generation by LLMs. 
+            In the second stage, we utilize a diffusion model through a two-step process to generate outputs with extraordinary details.
+            </p>
+            <img id="method" src="./static/images/framework.png" alt="method" height="100%">
           </div>
         </div>
+      </div>
+      <!-- Method. -->
+
+      <!-- Result. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Result</h2>
+          <div class="content has-text-justified">
+            <img id="result" src="./static/images/result.jpg" alt="result" height="100%">
+            <figcaption>(a) Stable Diffusion, (b) MultiDiffusion, (c) Attend and Excite, (d) LMD, (e) BoxDiff, (f) SDXL, (g) Ours</figcaption>
+          </div>
+        </div>
+      </div>
+      <!-- Result. -->
+
 
     </div>
   </section>
-
 
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
@@ -196,7 +216,7 @@
         <div class="column is-8">
           <div class="content">
             <p>
-              This website is adapted from the source code given by <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, 
+              This website is adapted from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, 
               licensed under a <a rel="license"
                 href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
                 Commons Attribution-ShareAlike 4.0 International License</a>.
