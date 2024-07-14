@@ -1,36 +1,212 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editable Image Elements</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="description"
+    content="The Fabrication of Reality and Fantasy: Scene Generation with LLM-Assisted Prompt Interpretation">
+  <meta name="keywords" content="Text-to-image Generation, Realistic-Fantasy Benchmark, Diffusion Model, Large Language Models (LLMs)">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Fabrication of Reality and Fantasy: Scene Generation with LLM-Assisted Prompt Interpretation</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
 </head>
+
 <body>
-    <header>
-        <h1>The Fabrication of Reality and Fantasy: Scene Generation with LLM-Assisted Prompt Interpretation</h1>
-        <p>Yi Yao*, Chan-Feng Hsu*, Jhe-Hao Lin, Hongxia Xie, Terence Lin, Yi-Ning Huang, Hong-Han Shuai, Wen-Huang Cheng</p>
-    </header>
-    <section id="abstract">
-        <h2>Abstract</h2>
-        <p>Diffusion models have made significant advances in text-guided synthesis tasks...</p>
-    </section>
-    <section id="approach">
-        <h2>Approach</h2>
-        <p>To encode the image, we extract features from the Segment Anything Model...</p>
-    </section>
-    <section id="spatial-editing">
-        <h2>Spatial Editing</h2>
-        <p>The user can directly edit the image elements with simple selection, dragging...</p>
-    </section>
-    <section id="object-removal">
-        <h2>Object Removal</h2>
-        <p>The user selects elements to delete and provides a text prompt...</p>
-    </section>
-    <section id="object-variations">
-        <h2>Object Variations</h2>
-        <p>Our method supports object variations by deleting some image elements...</p>
-    </section>
-    <script src="script.js"></script>
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">The Fabrication of Reality and Fantasy: Scene Generation with
+              LLM-Assisted Prompt Interpretation</h1>
+              <h3 class="title is-3 publication-title">(ECCV 2024)</h3>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="">Yi Yao*</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="">Chan-Feng Hsu*</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="">Jhe-Hao Lin</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="">Hongxia Xie</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="">Terence Lin</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="">Yi-Ning Huang</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="">Hong-Han Shuai</a><sup>1</sup>
+              </span>
+              <span class="author-block">
+                <a href="">Wen-Huang Cheng</a><sup>2</sup>
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>National Yang Ming Chiao Tung University,</span>
+              <span class="author-block"><sup>2</sup>National Taiwan University</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <!-- arXiv Link. -->
+                <span class="link-block">
+                  <a href="" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+                <!-- Dataset Link. -->
+                <span class="link-block">
+                  <a href="https://nycu1-my.sharepoint.com/:x:/g/personal/sakana1219_ee09_m365_nycu_edu_tw/EZlyRDJg4-pJit_YffF4lmMBDN36l4jusVVhSl0_7qbyMg?e=ykftCG" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="far fa-images"></i>
+                    </span>
+                    <span>Dataset</span>
+                  </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              In spite of recent advancements in text-to-image generation, it still has limitations when it comes to
+              complex, imaginative text prompts. Due to the limited exposure to diverse and complex data in their
+              training sets, text-to-image models often struggle to comprehend the semantics of these difficult prompts,
+              leading to the generation of irrelevant images. This work explores how diffusion models can process and
+              generate images based on prompts requiring artistic creativity or specialized knowledge. Recognizing the
+              absence of a dedicated evaluation framework for such tasks, we introduce a new benchmark, the
+              Realistic-Fantasy Benchmark (RFBench), which blends scenarios from both realistic and fantastical realms.
+              Accordingly, for reality and fantasy scene generation, we propose an innovative training-free approach,
+              Realistic-Fantasy Network (RFNet), that integrates diffusion models with LLMs. Through our proposed
+              RFBench, extensive human evaluations coupled with GPT-based compositional assessments have demonstrated
+              our approach's superiority over other state-of-the-art methods.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+
+      <div class="columns is-centered">
+
+        <!-- Result. -->
+        <div class="column">
+          <div class="content">
+            <h2 class="title is-3">Result</h2>
+            <img id="result" src="./static/images/result.jpg" alt="result" height="100%">
+          </div>
+        </div>
+
+    </div>
+  </section>
+
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <!-- <pre><code>@article{park2021nerfies,
+  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
+  title     = {Nerfies: Deformable Neural Radiance Fields},
+  journal   = {ICCV},
+  year      = {2021},
+}</code></pre> -->
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <!-- <div class="container">
+      <div class="content has-text-centered">
+        <a class="icon-link" href="">
+          <i class="fas fa-file-pdf"></i>
+        </a>
+        <a class="icon-link" href="" class="external-link" disabled>
+          <i class="fab fa-github"></i>
+        </a>
+      </div> -->
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website is adapted from the source code given by <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, 
+              licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
 </body>
+
 </html>
