@@ -45,6 +45,25 @@
       font-size: 14px;
       color: #555;
     }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    th, td {
+      border: 1px solid #000;
+      padding: 8px;
+      text-align: center;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    .highlight {
+      background-color: #f2f2f2;
+    }
+    .improvement {
+      color: red;
+    }
   </style>
 </head>
 
@@ -138,7 +157,11 @@
     </div>
   </section>
 
-  <section class="section">
+  <figure align="center">
+    <img id="intro" src="./static/images/intro.png" alt="intro_result" style="max-width: 50%;">
+  </figure>
+
+    <section class="section">
     <div class="container is-max-desktop">
       <!-- Abstract. -->
       <div class="columns is-centered has-text-centered">
@@ -211,16 +234,16 @@
           </div>
         </div>
       </div>
-      <!-- Method. -->
+      <!-- end Method. -->
     </div>
   </section>
 
   <section class="section">
     <div class="container is-max-desktop">
-      <!-- Result. -->
+      <!-- Qualitative Result. -->
       <div class="columns is-centered">
         <div class="column is-full-width">
-          <h2 class="title is-3">Result</h2>
+          <h2 class="title is-3">Qualitative Result</h2>
           <div class="image-container">
             <figure><img id="result" src="./static/images/result.jpg" alt="result" height="100%">
               <figcaption>Qualitative comparison on RFBench. The compared models include (a) Stable
@@ -242,8 +265,95 @@
           </div>
         </div>
       </div>
-      <!-- Result. -->
 
+      <!-- Quantitative Result. -->
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Quantitative Result</h2>
+          <table>
+            <thead>
+              <tr>
+                <th rowspan="2" style="vertical-align: middle;" align="center">Model</th>
+                <th colspan="3" align="center">GPT4-CLIP</th>
+                <th colspan="3" align="center">GPT4Score</th>
+              </tr>
+              <tr align="center">
+                <th>R & A</th>
+                <th>C & I</th>
+                <th>Avg</th>
+                <th>R & A</th>
+                <th>C & I</th>
+                <th>Avg</th>
+              </tr>
+            </thead>
+            <tbody align="center">
+              <tr>
+                <td>Stable Diffusion</td>
+                <td>0.573</td>
+                <td>0.552</td>
+                <td>0.561</td>
+                <td>0.667</td>
+                <td>0.440</td>
+                <td>0.541</td>
+              </tr>
+              <tr>
+                <td>MultiDiffusion</td>
+                <td>0.510</td>
+                <td>0.510</td>
+                <td>0.510</td>
+                <td>0.517</td>
+                <td>0.493</td>
+                <td>0.504</td>
+              </tr>
+              <tr>
+                <td>Attend and Excite</td>
+                <td>0.523</td>
+                <td>0.560</td>
+                <td>0.546</td>
+                <td>0.633</td>
+                <td>0.520</td>
+                <td>0.570</td>
+              </tr>
+              <tr>
+                <td>LLM-groundedDiffusion</td>
+                <td>0.457</td>
+                <td>0.536</td>
+                <td>0.501</td>
+                <td>0.550</td>
+                <td>0.600</td>
+                <td>0.578</td>
+              </tr>
+              <tr>
+                <td>BoxDiff</td>
+                <td>0.532</td>
+                <td>0.553</td>
+                <td>0.543</td>
+                <td>0.583</td>
+                <td>0.520</td>
+                <td>0.548</td>
+              </tr>
+              <tr>
+                <td>SDXL</td>
+                <td>0.536</td>
+                <td>0.619</td>
+                <td>0.582</td>
+                <td>0.567</td>
+                <td>0.587</td>
+                <td>0.578</td>
+              </tr>
+              <tr class="highlight">
+                <td><b>RFNet (ours)</b></td>
+                <td><b>0.587 </b><span class="improvement">(2%↑)</span></td>
+                <td><b>0.623 </b><span class="improvement">(13%↑)</span></td>
+                <td><b>0.607 </b><span class="improvement">(8%↑)</span></td>
+                <td><b>0.833 </b><span class="improvement">(25%↑)</span></td>
+                <td><b>0.627 </b><span class="improvement">(43%↑)</span></td>
+                <td><b>0.719 </b><span class="improvement">(33%↑)</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
 
     </div>
   </section>
