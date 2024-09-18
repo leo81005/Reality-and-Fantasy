@@ -1,0 +1,5 @@
+{
+    "A rat hunting a lion on the grassland": [
+        "[('a rat', [20, 120, 312, 292]), ('a lion', [340, 322, 150, 130])]\nDescriptions: [('a rat', 'roar, with big mouth and sharp teeth, leap out at'), ('a lion', 'unawared and sleeping')]\nMore Description: [[('A rat', 'bold and audacious, surprisingly attacking from behind'), ('a lion', 'shocked and confused, quickly turning to defend')], [('A rat', 'sneaky and quick, darting towards'), ('a lion', 'startled and attempting to escape, visibly frightened')]]\nBackground prompt: A grassland scene\nNegative prompt: "
+    ]
+}
